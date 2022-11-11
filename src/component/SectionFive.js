@@ -9,12 +9,12 @@ export default function SectionFive(){
     return(
         <div className='w-full flex flex-col items-center py-24'>
             <img src={title} alt="活動說明"></img>
-            <div className='flex py-12'>
-                <img src={decrib1} alt="報名時間" className='px-4'></img>
-                <img src={decrib2} alt="登陸作品" className='px-4'></img>
-                <img src={decrib3} alt="額外競賽" className='px-4'></img>
+            <div className='flex flex-col lg:flex-row mt-12'>
+                <img src={decrib1} alt="報名時間" className='px-4 mb-6'></img>
+                <img src={decrib2} alt="登陸作品" className='px-4 mb-6'></img>
+                <img src={decrib3} alt="額外競賽" className='px-4 mb-6'></img>
             </div>
-            <img src={time} alt="開賽時間"></img>
+            <img src={time} alt="開賽時間" className='px-3'></img>
         </div>
     )
 }

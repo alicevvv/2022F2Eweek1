@@ -1,4 +1,4 @@
-// import React,{ useState,useEffect } from 'react'
+import React,{ useState,useEffect, useRef, useLayoutEffect } from 'react'
 // image
 import kv1 from '../image/section1/KV-1.png'
 // import kv2 from './image/section1/KV-2.png'
@@ -8,9 +8,17 @@ import kv3 from '../image/section1/KV-3.png'
 import kv5 from '../image/section1/KV-5.png'
 import kv7 from '../image/section1/KV-7.png'
 import arrow from '../image/section1/scroll_down.png'
+import { gsap } from 'gsap'
 
 export default function SectionFirst(){
     // const [seconds,_setSconds] = useState(59)
+    const root = useRef()
+    useLayoutEffect(()=>{
+        let ctx = gsap.context(()=>{
+            gsap.to(".box",{rotation:"+=360",repeat:2},root);
+        })
+        return () => ctx.revert();
+    },[])
 
     return(
         <div className='flex flex-col py-3 md:py-16' style={{maxWidth:'1092px'}}>
