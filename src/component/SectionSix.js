@@ -14,7 +14,7 @@ export default function SectionSix(){
                 agendaData.map((item,index)=>{
                     return(
                         <div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-4 px-6 lg:px-48 mb-24 lg:mb-36' key={index}>
-                            <Tween from={{opacity:0,y:-100}} to={{opacity:1,y:0,scrollTrigger:{trigger:'.fade',start:'-100px center',end:'100px center',scrub:1,markers:true}}}>
+                            <Tween from={{opacity:0,y:-100}} to={{opacity:1,y:0,scrollTrigger:{trigger:'.fade',start:'-100px center',end:'100px center',scrub:1}}}>
                                 <div className='text-center lg:text-left fade'>
                                     <div className='text-white text-7xl font-bold mb-6'>{item.mainTitle}</div>
                                     <div className='text-white text-3xl font-bold mb-12 tracking-wider'>{item.time}</div>

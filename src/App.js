@@ -13,6 +13,7 @@ import SectionTen from './component/SectionTen';
 // image
 import star from './image/header_divide.png';
 import logo from './image/logo.png';
+import menu from './image/menu.png'
 // style
 import './App.css';
 
@@ -39,6 +40,9 @@ function App() {
             <button className=' bg-mainYellow border-black-0 border-2 px-3 py-1 font-bold mr-4'>註冊報名</button>
             <button className='border-black-0 border-2 px-3 py-1 font-bold'>登入</button>
           </div>
+        </div>
+        <div className='items-center flex lg:hidden'>
+          <img src={menu} alt="menu"></img>
         </div>
       </div>
       <div className='w-full flex justify-center bg-black-bg'>

@@ -38,7 +38,8 @@ export default function SectionFirst(){
     },[_timeleft])
 
     return(
-        <div className='flex flex-col py-3 md:py-16' style={{maxWidth:'1092px'}}>
+        <div className='flex flex-col py-3 md:py-16 max-w-[760px] lg:max-w-[1092px]'>
+            {/* //style={{maxWidth:'1092px'}} */}
             <table className='table-auto'>
                 <tbody>
                     <tr>
