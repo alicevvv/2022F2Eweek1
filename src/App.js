@@ -16,17 +16,25 @@ import logo from './image/logo.png';
 // style
 import './App.css';
 
+
+
 function App() {
+
+  const gotoSection=(position)=>{
+    console.log(position)
+    const section = document.querySelector(position);
+    section.scrollIntoView({behavior:'smooth',block:'start'})
+  }
   return (
     <div className="App">
       <div className='w-full h-header flex items-center justify-between px-3 md:px-24'>
         <img src={logo} alt="logo"></img>
         <div className='items-center hidden lg:flex'>
-          <button className='font-bold'>關卡資訊</button>
+          <button className='font-bold p-3' onClick={()=>gotoSection('#section4')}>關卡資訊</button>
           <img src={star} alt="divide" className='px-4'></img>
-          <button className='font-bold'>攻略資源</button>
+          <a className='font-bold p-3' href='https://hackmd.io/ofJD4K7iSI65V19zxC7d0w'>攻略資源</a>
           <img src={star} alt="divide" className='px-4'></img>
-          <button className='font-bold'>求職專區</button>
+          <a className='font-bold p-3' href='https://2022.thef2e.com/jobs'>求職專區</a>
           <div className='flex items-center pl-4'>
             <button className=' bg-mainYellow border-black-0 border-2 px-3 py-1 font-bold mr-4'>註冊報名</button>
             <button className='border-black-0 border-2 px-3 py-1 font-bold'>登入</button>
@@ -42,7 +50,7 @@ function App() {
       <div className='w-full bg-mainYellow'>
         <SectionThird/>
       </div>
-      <div className='w-full bg-lightBlue'>
+      <div className='w-full bg-lightBlue' id="section4">
         <SectionForth/>
       </div>
       <div className='w-full bg-black-bg'>

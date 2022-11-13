@@ -31,6 +31,9 @@ module.exports = {
       },
       fontFamily:{
         audiowide:['"Audiowide"',...defaultTheme.fontFamily.sans]
+      },
+      dropShadow:{
+        'whiteCard':'0 35px 35px #ffffff'
       }
     },
   },

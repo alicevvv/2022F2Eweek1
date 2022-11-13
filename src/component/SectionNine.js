@@ -1,9 +1,5 @@
 // image
 import title from '../image/section9/title.png'
-import god1 from '../image/section9/god1.png'
-import god2 from '../image/section9/god2.png'
-import god3 from '../image/section9/god3.png'
-import god4 from '../image/section9/god4.png'
 import arrow from '../image/section9/arrow.png'
 // json
 import { godsInfo } from '../json/godsInfo'
@@ -16,7 +12,7 @@ export default function SectionNine(){
                 {
                     godsInfo.map((item,index)=>{
                         return(
-                            <div className='flex w-full flex-col lg:flex-row py-6'>
+                            <div className='flex w-full flex-col lg:flex-row py-6' key={index}>
                                 <img src={item.godImage} alt={item.godName} className='flex-none mx-6 lg:mx-0'></img>
                                 <div className='grow flex flex-col justify-between bg-white rounded-none lg:rounded-tr-[100px] pt-3'>
                                     <div className='bg-lightBlue w-1/3 lg:w-1/5 text-white mx-3 px-3'>免費公開場</div>

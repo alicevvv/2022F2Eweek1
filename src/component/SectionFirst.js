@@ -2,9 +2,8 @@ import React,{ useState,useEffect, useRef, useLayoutEffect } from 'react'
 import Typed from 'react-typed'
 // image
 import kv1 from '../image/section1/KV-1.png'
-// import kv2 from '../image/section1/KV-2.png'/
 import eyes1 from '../image/section1/eyes1.png'
-import eyes2 from '../image/section1/eyes2.png'
+// import eyes2 from '../image/section1/eyes2.png'
 import kv6 from '../image/section1/KV-6.png'
 import kv4 from '../image/section1/KV-4.png'
 import kv3 from '../image/section1/KV-3.png'
@@ -12,11 +11,8 @@ import kv5 from '../image/section1/KV-5.png'
 import kv7 from '../image/section1/KV-7.png'
 import arrow from '../image/section1/scroll_down.png'
 import { gsap } from 'gsap'
-// style
-import '../styled/SectionFirst.css'
 
 export default function SectionFirst(){
-    // const [seconds,_setSconds] = useState(59)
     const [_timeleft,_setTimeLeft] = useState(59)
     const intervalRef = useRef()
 
@@ -24,7 +20,6 @@ export default function SectionFirst(){
     useLayoutEffect(()=>{
         let ctx = gsap.context(()=>{
             gsap.to(".box",{rotation:"+=360",repeat:2},root);
-            // gsap.to(".twinkle",{opacity:0,repeat:-1,duration:1},root);
         })
         return () => ctx.revert();
     },[])
@@ -38,7 +33,6 @@ export default function SectionFirst(){
     },[]);
     useEffect(()=>{
         if (_timeleft < 0) {
-            // clearInterval(intervalRef.current);
             _setTimeLeft(59)
         }
     },[_timeleft])
@@ -54,10 +48,7 @@ export default function SectionFirst(){
                         <td className='border-white border-2 bg-mainYellow relative'>
                             <div className='flex justify-center h-full p-3'>
                                 <img src={kv6} alt="banner" className='w-auto'></img>
-                                {/* <img src={kv2} alt="banner" className='absolute mx-auto w-1/4' 
-                                style={{right:'0px',bottom:'-70px'}}></img> */}
                                 <img src={eyes1} alt="banner" className='absolute w-1/4' style={{right:'0px',bottom:'0px'}}></img>
-                                {/* <img src={eyes2} alt="banner" className='absolute w-1/4' style={{right:'0px',bottom:'0px'}}></img> */}
                             </div>
                         </td>
                     </tr>
@@ -71,13 +62,13 @@ export default function SectionFirst(){
                                 <img src={kv7} alt="banner" className='flex'></img>
                             </div>
                         </td>
-                        <td className='border-white text-left border-2 px-0 lg:pl-3' colSpan={3}>
-                            <span className='text-white font-bold text-xl md:text-6xl'>互動式｜</span>
+                        <td className='border-white text-left border-2 pl-1 lg:pl-3' colSpan={3}>
+                            <span className='text-white font-bold text-xl md:text-3xl lg:text-6xl'>互動式｜</span>
                             <Typed
                                 strings={['網頁設計']}
                                 typeSpeed={500}
                                 loop
-                                className='text-black-bg text-xl font-bold tracking-wider md:text-6xl'
+                                className='text-black-bg text-xl font-bold tracking-wider md:text-3xl lg:text-6xl'
                                 style={{textShadow:'white -1px 0px, white 1px 0px, white 0px 1px, white 0px -1px'}}
                             />
                         </td>
