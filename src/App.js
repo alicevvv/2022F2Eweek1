@@ -8,6 +8,8 @@ import SectionFive from './component/SectionFive';
 import SectionSix from './component/SectionSix';
 import SectionSeven from './component/SectionSeven';
 import SectionEight from './component/SectionEight';
+import SectionNine from './component/SectionNine';
+import SectionTen from './component/SectionTen';
 // image
 import star from './image/header_divide.png';
 import logo from './image/logo.png';
@@ -55,21 +57,12 @@ function App() {
       <div className='w-full bg-white'>
         <SectionEight/>
       </div>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <div className='text-black'>test</div>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      <div className='w-full bg-lightBlue'>
+        <SectionNine/>
+      </div>
+      <div className='w-full bg-black-bg'>
+        <SectionTen/>
+      </div>
     </div>
   );
 }
